@@ -1,0 +1,34 @@
+package Exception_Handling;
+import java.util.Scanner;
+
+public class Arithmetic_opr {
+	//creating  a variable
+	int num1,num2,res;
+	public static void main(String[]args)
+	{
+		//creating a object of a class
+		Arithmetic_opr obj=new Arithmetic_opr();
+		obj.Div_pro();
+	}
+	public void Div_pro()
+	{
+		//using try block
+		try
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enterr numbers");//taking input from user
+			num1=sc.nextInt();
+			num2=sc.nextInt();
+			res=num1/num2;
+			System.out.println("The divesion of two num is:"+res);
+			res=num1%num2;
+			System.out.println("The modulous of two number is:"+res);
+			
+		}
+		//using the catch block for handling the exceptions
+		catch(Exception e)
+		{
+		   System.out.println("The second number can not be zero:"+e.getMessage());
+		}
+	}
+}
